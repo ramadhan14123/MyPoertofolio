@@ -1,4 +1,4 @@
-const texts = ["Photographer", "UI/UX Desaigner", "Designer"]; // Daftar kata
+const texts = ["Photographer", "UI/UX Desaigner", "Designer"];
 let count = 0;
 let index = 0;
 let currentText = '';
