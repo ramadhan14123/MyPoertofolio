@@ -21,6 +21,11 @@ let letter = '';
     }
 })();
 
+function redirectToLink() {
+     window.open("https://www.instagram.com/mvp.captured.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", "_blank");
+}
+
+
 document.getElementById('menu-icon').addEventListener('click', function() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active');
@@ -48,7 +53,6 @@ video.addEventListener('ended', function() {
 });
 
 
-// salin clipboard dari contact
 // telpon
 document.getElementById('click-phone').addEventListener('click', function(event) {
     const phoneNumber = document.getElementById('phone-no').innerText;
