@@ -52,6 +52,25 @@ video.addEventListener('ended', function() {
     video.play();
 });
 
+// Lazy Loading
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll(".lazy");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove("lazy");
+                img.removeAttribute("data-src");
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => observer.observe(img));
+});
+
 
 // telpon
 document.getElementById('click-phone').addEventListener('click', function(event) {
